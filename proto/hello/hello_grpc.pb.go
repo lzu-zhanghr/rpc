@@ -45,6 +45,7 @@ func (c *helloClient) SayHello(ctx context.Context, in *HelloRequest, opts ...gr
 type HelloServer interface {
 	// 定义SayHello方法
 	SayHello(context.Context, *HelloRequest) (*HelloResponse, error)
+	mustEmbedUnimplementedHelloServer()
 }
 
 // UnimplementedHelloServer must be embedded to have forward compatible implementations.
